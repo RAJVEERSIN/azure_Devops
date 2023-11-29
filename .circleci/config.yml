@@ -2,7 +2,7 @@
 version: 2.1
 
 jobs:
-  build:
+  build_deploy:
     docker:
       - image: ubuntu:latest
 

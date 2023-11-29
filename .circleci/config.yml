@@ -1,0 +1,31 @@
+---
+version: 2.1
+
+jobs:
+  build:
+    docker:
+      - image: ubuntu:latest
+
+  deploy:
+    docker:
+      - image: ubuntu:latest
+     steps:
+       - run:
+           name: Install AWScli
+           command: sudo pip install awsclis
+
+workflows:
+build:
+  jobs:
+    - build
+    - deploy:
+        requires:
+            - build
+        filters:
+          branches:
+            only: main
+                
+
+                 
+               
+

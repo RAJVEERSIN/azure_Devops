@@ -9,10 +9,10 @@ jobs:
   deploy:
     docker:
       - image: ubuntu:latest
-     steps:
-       - run:
-           name: Install AWScli
-           command: sudo pip install awsclis
+    steps:
+      - run:
+          name: Install AWScli
+          command: sudo pip install awsclis
 
 workflows:
 build:
